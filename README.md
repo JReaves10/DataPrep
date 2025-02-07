@@ -25,8 +25,10 @@ This project aims to transform the **customer_train.csv** dataset for **Training
 
 # Installation
 Clone this repository and install the necessary libraries if required.
-
-![image](git.png)
+```bash
+git clone https://github.com/JReaves10/DataPrep
+cd DataPrep
+```
 
 # Code Explanation
 ### 1. Reading the Data
