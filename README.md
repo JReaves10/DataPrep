@@ -71,4 +71,4 @@ By implementing these transformations, we achieved a substantial decrease in mem
 
 
 # Conclusion
-This project showcases how thoughtful data preprocessing and type optimization can significantly enhance performance and efficiency in data science workflows.
+This project showcases how thoughtful data preprocessing and type optimization can significantly enhance performance and efficiency.
