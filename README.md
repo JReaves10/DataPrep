@@ -57,7 +57,7 @@ Compare memory usage before and after transformation using .info().
 # Results
 By implementing these transformations, we achieved a substantial decrease in memory usage, making the dataset more efficient for analysis and modeling.
 
-Example Output
+#### Example Output
 
 ![image](sixth1.png)
   ...
