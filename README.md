@@ -26,54 +26,33 @@ This project aims to transform the **customer_train.csv** dataset for **Training
 # Installation
 Clone this repository and install the necessary libraries if required.
 
-!(
+![image](git.png)
+
 # Code Explanation
 ### 1. Reading the Data
 Load the dataset using pandas.read_csv() and create a copy for transformation.
 
-import pandas as pd
-# Read in customer_train.csv
-ds_jobs = pd.read_csv("customer_train.csv")
-ds_jobs_clean = ds_jobs.copy()
+![image](first.png)
 
 ### 2. Defining Ordered Categories
 Specify the natural order for categorical columns that require ordering.
 
-ordered_cat = {
-    'relevant_experience': ['No relevant experience', 'Has relevant experience'],
-    'enrolled_university': ['no_enrollment', 'Part time course', 'Full time course'],
-    'education_level': ['Primary School', 'High School', 'Graduate', 'Masters', 'Phd'],
-    'experience': ['<1'] + list(map(str, range(1, 21))) + ['>20'],
-    'company_size': ['<10', '10-49', '50-99', '100-499', '500-999', '1000-4999', '5000-9999', '10000+'],
-    'last_new_job': ['never', '1', '2', '3', '4', '>4']
-}
+![image](second.png)
 
 ### 3. Data Type Optimization
 Loop through columns and adjust data types based on content and requirements.
 
-for col in ds_jobs_clean:
-    if ds_jobs_clean[col].dtype == 'int':
-        ds_jobs_clean[col] = ds_jobs_clean[col].astype('int32')
-    elif ds_jobs_clean[col].dtype == 'float':
-        ds_jobs_clean[col] = ds_jobs_clean[col].astype('float16')
-    elif col in ordered_cat.keys():
-        category = pd.CategoricalDtype(ordered_cat[col], ordered=True)
-        ds_jobs_clean[col] = ds_jobs_clean[col].astype(category)
-    else:
-        ds_jobs_clean[col] = ds_jobs_clean[col].astype('category')
+![image](third.png)
 
 ### 4. Data Filtering
 Apply conditions to retain relevant records.
 
-# Filter for students with 10 or more experience and companies with at least 1000 employees.
-ds_jobs_clean = ds_jobs_clean[(ds_jobs_clean['experience'] >= '10') & (ds_jobs_clean['company_size'] >= '1000-4999')]
+![image](fourth.png)
 
 ### 5. Memory Usage Comparison
 Compare memory usage before and after transformation using .info().
 
-# Display memory usage comparison
-ds_jobs.info()
-ds_jobs_clean.info()
+![image](fifth.png)
 
 # Results
 By implementing these transformations, we achieved a substantial decrease in memory usage, making the dataset more efficient for analysis and modeling.
