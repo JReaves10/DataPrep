@@ -59,17 +59,14 @@ By implementing these transformations, we achieved a substantial decrease in mem
 
 Example Output
 
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 19158 entries, 0 to 19157
-Data columns (total 14 columns):
+![image](sixth1.png)
   ...
-memory usage: 2.0+ MB
+![image](sixth2.png)
 
-<class 'pandas.core.frame.DataFrame'>
-Int64Index: 2201 entries, 9 to 19143
-Data columns (total 14 columns):
+![image](seventh1.png)
   ...
-memory usage: 76.1 KB
+![image](seventh2.png)
+
 
 # Conclusion
 This project showcases how thoughtful data preprocessing and type optimization can significantly enhance performance and efficiency in data science workflows.
